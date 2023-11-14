@@ -1,0 +1,82 @@
+@import '../../app.scss';
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100px;
+  padding: 0px 50px;
+  // background-color: aliceblue;
+
+  .logo {
+    h1 {
+      // background-color: aliceblue;
+      text-transform: uppercase;
+      font-size: 35px;
+    }
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .links {
+    // background-color: rgba(0, 0, 255, 0.105);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    a {
+      --transparency: 80%;
+      --width: 100px;
+      width: var(--width);
+      background-color: white;
+      display: block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: black;
+      transition: color 500ms, background 500ms, left 500ms, transform 500ms;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+      position: relative;
+      text-align: center;
+      left: 0;
+      background: color-mix(in srgb, white, transparent var(--transparency));
+      backdrop-filter: blur(3px);
+    }
+
+    a:hover {
+      --transparency: 20%;
+      transform: scale(1.2);
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 30px;
+    }
+
+    a:hover {
+      transition: transform 500ms;
+      transform: scale(1.4);
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+}

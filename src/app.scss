@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 750px) and (max-width: 1020px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1020px) {
+    @content;
+  }
+}

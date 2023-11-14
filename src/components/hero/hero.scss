@@ -1,5 +1,120 @@
+@import '../../app.scss';
+
 .hero {
   background: linear-gradient(to bottom, rgb(41, 123, 123), white);
   // height: 100vh;
   padding-top: 100px;
+
+  .wrapper {
+    max-width: 1360px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    @include desktop {
+      padding: 0 50px;
+    }
+
+    @include tablet {
+      padding: 0 50px;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      padding: 0 10px;
+      flex-direction: column;
+    }
+
+    .title {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include tablet {
+        align-items: center;
+      }
+
+      @include mobile {
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 80px;
+        font-weight: bolder;
+        line-height: 1;
+        text-transform: capitalize;
+
+        @include desktop {
+          font-size: 65px;
+        }
+
+        @include tablet {
+          text-align: center;
+          font-size: 55px;
+        }
+
+        @include mobile {
+          text-align: center;
+          font-size: 45px;
+        }
+      }
+      p {
+        text-transform: capitalize;
+        font-size: 17px;
+
+        @include mobile {
+          padding: 0 60px;
+          text-align: center;
+          font-size: 15px;
+        }
+      }
+      button {
+        padding: 10px;
+        width: 300px;
+        background: orangered;
+        border: none;
+        border-radius: 5px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        @include mobile {
+          width: 200px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .image {
+      flex: 1;
+      margin-left: 70px;
+
+      @include tablet {
+        margin-left: 0;
+      }
+
+      @include mobile {
+        margin-left: 0;
+      }
+      .imageContainer {
+        position: relative;
+        // background-color: black;
+        img {
+          width: 450px;
+
+          @include tablet {
+            width: 350px;
+          }
+
+          @include mobile {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
 }

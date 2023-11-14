@@ -64,6 +64,10 @@
     display: none;
   }
 
+  @include desktopXL {
+    display: none;
+  }
+
   .social {
     display: flex;
     gap: 20px;

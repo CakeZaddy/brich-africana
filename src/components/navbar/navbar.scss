@@ -11,6 +11,14 @@
   z-index: 100;
   // background-color: aliceblue;
 
+  @include tablet {
+    position: absolute;
+  }
+
+  @include mobile {
+    position: absolute;
+  }
+
   .logo {
     h1 {
       // background-color: aliceblue;

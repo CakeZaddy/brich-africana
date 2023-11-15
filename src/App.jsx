@@ -1,5 +1,6 @@
 import './app.scss'
 import Hero from './components/hero/Hero'
+import Portfolio from './components/portfolio/Portfolio'
 import Services from './components/services/Services'
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
       <section id='Services'>
         <Services />
       </section>
-      <section>Portfolio</section>
+      <section id='Portfolio'>
+        <Portfolio />
+      </section>
       <section>Projects</section>
       <section>Contact Us</section>
     </>

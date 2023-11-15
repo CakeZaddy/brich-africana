@@ -1,11 +1,11 @@
 import './app.scss'
 import Hero from './components/hero/Hero'
-import Services from './components/services/services'
+import Services from './components/services/Services'
 
 function App() {
   return (
     <>
-      <section id='Homepage'>
+      <section id='Home'>
         <Hero />
       </section>
       <section id='Services'>

@@ -34,7 +34,7 @@ const Links = ({ setOpen }) => {
       {items.map((item) => (
         <motion.a
           variants={itemVariants}
-          href={`${item}`}
+          href={`#${item}`}
           key={item}
           onClick={() => setOpen((prev) => !prev)}
         >

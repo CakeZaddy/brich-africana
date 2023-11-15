@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <div className='links'>
         {items.map((item) => (
-          <a href={`${item}`} className='home'>
+          <a href={`#${item}`} className='home' key={item}>
             {item}
           </a>
         ))}

@@ -81,6 +81,7 @@
         font-weight: bold;
         cursor: pointer;
         text-transform: capitalize;
+        color: white;
 
         @include mobile {
           width: 200px;

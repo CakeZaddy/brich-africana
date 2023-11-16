@@ -3,6 +3,7 @@
 .portfolio {
   background-color: rgb(249, 248, 230);
   padding-top: 50px;
+  padding-bottom: 50px;
 
   @include desktop {
   }
@@ -18,7 +19,8 @@
   max-width: 1360px;
   margin: auto;
 
-  .creative {
+  .creative,
+  .creation {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,6 +119,51 @@
         padding: 10px 30px;
         color: white;
         cursor: pointer;
+      }
+    }
+  }
+
+  .creation {
+    background-color: rgb(193, 191, 147);
+    padding: 50px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    padding-top: 50px;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+
+    .desc {
+      flex: 1;
+
+      h2 {
+        font-weight: bold;
+      }
+
+      p {
+        padding-right: 200px;
+
+        @include tablet {
+          padding: 0 60px;
+        }
+
+        @include mobile {
+          padding: 0 40px;
+        }
+      }
+    }
+
+    .image {
+      flex: 1;
+
+      img {
+        width: 500px;
+        border-radius: 25px;
+
+        @include mobile {
+          width: 350px;
+        }
       }
     }
   }

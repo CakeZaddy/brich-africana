@@ -8,6 +8,7 @@
   }
 
   @include tablet {
+    padding: 20px 0;
   }
 
   @include mobile {
@@ -134,6 +135,60 @@
       color: white;
       transform: translate3d(-10px, -15px, 0);
       box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .contactUs {
+    background: rgb(41, 123, 123);
+    border-radius: 15px;
+    padding: 100px 60px;
+    margin-top: 80px;
+    box-shadow: 10x 10px 10px rgb(41, 123, 123);
+
+    @include tablet {
+      margin-top: 40px;
+      padding: 60px 40;
+    }
+
+    @include mobile {
+      margin-top: 40px;
+      padding: 30px;
+    }
+
+    .contactContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      text-transform: capitalize;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 30px;
+
+        @include mobile {
+          font-size: 24px;
+        }
+      }
+
+      button {
+        background: orangered;
+        padding: 10px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
     }
   }
 }

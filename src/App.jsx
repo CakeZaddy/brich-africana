@@ -19,7 +19,7 @@ function App() {
       <section id='Projects'>
         <Projects />
       </section>
-      <section id='Contact'>Contact Us</section>
+      {/* <section id='Contact'>Contact Us</section> */}
     </>
   )
 }

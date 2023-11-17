@@ -1,6 +1,7 @@
 import React from 'react'
 import './projects.scss'
 import Project from './Project'
+import ContactUs from './ContactUs'
 
 const projects = [
   {
@@ -56,6 +57,9 @@ const Projects = () => {
           {projects.map((project) => (
             <Project project={project} key={project.id} />
           ))}
+        </div>
+        <div className='contactUs'>
+          <ContactUs />
         </div>
       </div>
     </div>

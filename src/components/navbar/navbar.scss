@@ -8,25 +8,39 @@
   width: 100vw;
   height: 100px;
   padding: 0px 50px;
-  z-index: 100;
-  // background-color: aliceblue;
+  z-index: 99;
+  --transparency: 70%;
+  background: color-mix(in srgb, white, transparent var(--transparency));
+  backdrop-filter: blur(5px);
 
   @include tablet {
     position: absolute;
+    background: transparent;
   }
 
   @include mobile {
     position: absolute;
+    background: transparent;
   }
 
   .logo {
+    @include mobile {
+      display: grid;
+      place-items: center;
+    }
+
     h1 {
       // background-color: aliceblue;
       text-transform: uppercase;
       font-size: 35px;
     }
+
+    @include tablet {
+      padding-left: 30px;
+    }
     @include mobile {
       text-align: center;
+      // padding-left: 10px;
     }
   }
 

@@ -6,7 +6,7 @@ const Creation = () => {
       <div className='desc'>
         <h2>
           full of energy, drive, <br /> and passion , our team aims to deliver
-          the most outstanding work in ever detail
+          the most outstanding work in every detail
         </h2>
         <p>
           we believe that value-creation is the primary aim of any business and

@@ -48,14 +48,17 @@ const Links = ({ setOpen }) => {
         </motion.a>
       ))}
       <motion.div className='social'>
-        <a href='#'>
+        <a href='https://facebook.com' target='_blank' rel='noopener'>
           <img src='/facebook.png' alt='' />
         </a>
-        <a href='#'>
+        <a href='https://instagram.com' target='_blank' rel='noopener'>
           <img src='/instagram.png' alt='' />
         </a>
-        <a href='#'>
-          <img src='/dribbble.png' alt='' />
+        <a href='https://twitter.com' target='_blank' rel='noopener'>
+          <img src='/x-logo.png' alt='' />
+        </a>
+        <a href='https://linkedin.com' target='_blank' rel='noopener'>
+          <img src='/linkedIn.webp' alt='' />
         </a>
       </motion.div>
     </motion.div>

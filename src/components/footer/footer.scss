@@ -1,2 +1,102 @@
-footer {
+@import '../../app.scss';
+
+.footer {
+  background: rgb(249, 248, 230);
+  padding-top: 20px;
+
+  @include tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.wrapper {
+  .footerContent {
+    display: flex;
+    text-transform: capitalize;
+    padding: 30px 0;
+
+    @include mobile {
+      padding-left: 10px;
+      padding-right: 10px;
+      flex-direction: column-reverse;
+    }
+
+    .logoFooter {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      img {
+        width: 100px;
+
+        @include mobile {
+          width: 80px;
+        }
+      }
+    }
+
+    .footerDesc {
+      flex: 2;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+
+      @include mobile {
+        text-align: center;
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 10px;
+
+        @include mobile {
+          gap: 5px;
+        }
+
+        .socialsFooter {
+          display: flex;
+          justify-content: space-around;
+          img {
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+    text-transform: capitalize;
+
+    @include mobile {
+      padding: 5px 10px;
+    }
+
+    .sula {
+      display: flex;
+      align-items: center;
+      img {
+        width: 30px;
+        border-radius: 50%;
+
+        @include mobile {
+          width: 20px;
+        }
+      }
+    }
+  }
 }

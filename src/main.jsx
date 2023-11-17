@@ -9,6 +9,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Navbar />
     <App />
-    <Footer />
+    <div id='Footer'>
+      <Footer />
+    </div>
   </React.StrictMode>
 )

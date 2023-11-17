@@ -5,39 +5,39 @@ import Project from './Project'
 const projects = [
   {
     id: '1',
-    image: '/branding.jpg',
+    image: '/personal-branding.jpg',
     title: 'personal branding || uncle sula',
     desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
   },
   {
     id: '2',
-    image: '/branding.jpg',
-    title: 'personal branding || uncle sula',
-    desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
+    image: '/figma.png',
+    title: 'website building with CMS || twitch foods',
+    desc: 'here is a website we built with CMS for twitch. our websites makes you stand out.',
   },
   {
     id: '3',
-    image: '/branding.jpg',
-    title: 'personal branding || uncle sula',
-    desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
+    image: '/blog.jpg',
+    title: 'blog building with coding || uncle sula',
+    desc: 'this is a blog we built for uncle sula to help with his branding. we also deliver top websites with codes.',
   },
   {
     id: '4',
-    image: '/branding.jpg',
-    title: 'personal branding || uncle sula',
-    desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
+    image: '/resume.webp',
+    title: 'Refurbished resume || jack brow',
+    desc: 'here we refurbished a resume for jack brow. our resume refurbishing is top notch',
   },
   {
     id: '5',
-    image: '/branding.jpg',
-    title: 'personal branding || uncle sula',
-    desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
+    image: '/co-working.jpg',
+    title: 'co-working || uncle sula blog',
+    desc: 'after building his blog, we also co-work with uncle sula to deliver top contents. our contents are well picked and grafted',
   },
   {
     id: '6',
-    image: '/branding.jpg',
-    title: 'personal branding || uncle sula',
-    desc: 'here is the branding we did for uncle sula. our branding makes you stand out',
+    image: '/video.webp',
+    title: 'video contents || amaka ndubisi',
+    desc: 'we also make video contents. our team makes video contents that are top notch.',
   },
 ]
 
@@ -52,7 +52,11 @@ const Projects = () => {
             market research, practical strategies and professional execution.
           </p>
         </div>
-        <Project />
+        <div className='projectWrap'>
+          {projects.map((project) => (
+            <Project project={project} key={project.id} />
+          ))}
+        </div>
       </div>
     </div>
   )

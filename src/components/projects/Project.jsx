@@ -1,68 +1,13 @@
 import React from 'react'
 
-const Project = () => {
+const Project = ({ project }) => {
   return (
-    <div className='projectWrap'>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
+    <div className='project' key={project.id}>
+      <div className='imageWrap'>
+        <img src={project.image} alt='' />
       </div>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
-      </div>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
-      </div>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
-      </div>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
-      </div>
-      <div className='project'>
-        <div className='imageWrap'>
-          <img src='/branding.jpg' alt='' />
-        </div>
-        <h3>company branding || Uncle Sula</h3>
-        <p>
-          here is the branding we did for uncle sula. our branding makes you
-          stand-out!
-        </p>
-      </div>
+      <h3>{project.title}</h3>
+      <p>{project.desc}</p>
     </div>
   )
 }

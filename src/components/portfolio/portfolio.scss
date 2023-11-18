@@ -134,6 +134,14 @@
     align-items: center;
     justify-content: center;
 
+    @include tablet {
+      border-radius: 0%;
+    }
+
+    @include mobile {
+      border-radius: 0%;
+    }
+
     .desc {
       flex: 1;
 

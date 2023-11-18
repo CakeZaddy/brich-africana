@@ -39,7 +39,7 @@ const Footer = () => {
               <h3>contact us</h3>
               <p>whatsApp</p>
               <p>telegram</p>
-              <p>brichafricana@gmail,com</p>
+              <p>email</p>
               <div className='socialsFooter'>
                 <a href='https://facebook.com' target='_blank' rel='noopener'>
                   <img src='/facebook.png' alt='' />

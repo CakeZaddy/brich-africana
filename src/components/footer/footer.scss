@@ -16,8 +16,7 @@
     padding: 30px 0;
 
     @include mobile {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding: 10px;
       flex-direction: column-reverse;
     }
 
@@ -37,7 +36,7 @@
         width: 100px;
 
         @include mobile {
-          width: 80px;
+          width: 50px;
         }
       }
     }
@@ -60,6 +59,18 @@
 
         @include mobile {
           gap: 5px;
+
+          h3 {
+            font-size: 16px;
+          }
+
+          a {
+            font-size: 10px;
+          }
+
+          p {
+            font-size: 10px;
+          }
         }
 
         .socialsFooter {
@@ -67,6 +78,12 @@
           justify-content: space-around;
           img {
             width: 18px;
+          }
+
+          @include mobile {
+            img {
+              width: 10px;
+            }
           }
         }
       }

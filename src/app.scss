@@ -14,7 +14,7 @@ button {
   @media (max-width: 738px) {
     @content;
 
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
 }
 @mixin tablet {

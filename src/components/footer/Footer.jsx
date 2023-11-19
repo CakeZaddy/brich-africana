@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './footer.scss'
 
 const Footer = () => {
+  const currentYear = useState(new Date().getFullYear())
+
   return (
     <div className='footer'>
       <div className='wrapper'>
@@ -35,7 +37,7 @@ const Footer = () => {
               <a href='#Footer'>contact us</a>
               <a href='#Footer'>feedback</a>
             </div>
-            <div className='details'>
+            <div className='details contact-us'>
               <h3>contact us</h3>
               <p>whatsApp</p>
               <p>telegram</p>
@@ -59,7 +61,10 @@ const Footer = () => {
         </div>
         <hr />
         <div className='bottom'>
-          <p>&copy; copyright uncle sula all rights reserved</p>
+          <p>
+            copyright<span>&copy; {currentYear} </span> uncle sula all rights
+            reserved
+          </p>
           <div className='sula'>
             <p>made by uncle sula</p>
             <img src='UncleSula-logo.png' alt='' />

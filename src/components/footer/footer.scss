@@ -56,6 +56,7 @@
         flex-direction: column;
         justify-content: start;
         gap: 10px;
+        width: 100%;
 
         @include mobile {
           gap: 5px;
@@ -75,12 +76,15 @@
 
         .socialsFooter {
           display: flex;
-          justify-content: space-around;
+          justify-content: start;
+          gap: 10px;
+
           img {
             width: 18px;
           }
 
           @include mobile {
+            justify-content: center;
             img {
               width: 10px;
             }
@@ -106,6 +110,7 @@
     .sula {
       display: flex;
       align-items: center;
+      gap: 5px;
       img {
         width: 30px;
         border-radius: 50%;
@@ -115,5 +120,9 @@
         }
       }
     }
+  }
+
+  .contact-us {
+    // background: #000;
   }
 }

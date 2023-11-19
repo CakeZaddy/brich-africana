@@ -12,7 +12,9 @@ const Hero = () => {
             we build the kind of careers that are top in the labour market,{' '}
             <br /> we build it with professionals in dedicated areas.
           </p>
-          <button>Contact us today</button>
+          <button>
+            <a href='/Contact'>contact us now</a>
+          </button>
         </div>
         <div className='image'>
           <div className='imageContainer'>

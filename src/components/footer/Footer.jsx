@@ -16,8 +16,8 @@ const Footer = () => {
           <div className='footerDesc'>
             <div className='details'>
               <h3>about</h3>
-              <a href='#Footer'>about us</a>
-              <a href='#Footer'>services</a>
+              <a href='#Portfolio'>about us</a>
+              <a href='#Services'>services</a>
               <a href='#Footer'>careers</a>
               <a href='#Footer'>news</a>
               <a href='#Footer'>pricing</a>
@@ -34,7 +34,7 @@ const Footer = () => {
               <h3>support</h3>
               <a href='#Footer'>account</a>
               <a href='#Footer'>support center</a>
-              <a href='#Footer'>contact us</a>
+              <a href='/Contact'>contact us</a>
               <a href='#Footer'>feedback</a>
             </div>
             <div className='details contact-us'>

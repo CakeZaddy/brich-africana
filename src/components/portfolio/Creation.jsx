@@ -13,7 +13,9 @@ const Creation = () => {
           the execution excellence is the basis of value-creation for
           organizations and individuals
         </p>
-        <button>contact us now</button>
+        <button>
+          <a href='/Contact'>contact us now</a>
+        </button>
       </div>
       <div className='image'>
         <img src='./branding.jpg' alt='' />

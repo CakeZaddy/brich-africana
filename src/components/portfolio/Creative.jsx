@@ -19,7 +19,9 @@ const Creative = () => {
           competencies nimbly combined and refined into a custom solution for
           our clients and their brands
         </p>
-        <button>contact us now</button>
+        <button>
+          <a href='/Contact'>contact us now</a>
+        </button>
       </div>
     </div>
   )

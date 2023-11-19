@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './footer.scss'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = useState(new Date().getFullYear())
@@ -34,7 +35,9 @@ const Footer = () => {
               <h3>support</h3>
               <a href='#Footer'>account</a>
               <a href='#Footer'>support center</a>
-              <a href='/Contact'>contact us</a>
+              <Link to='/contact'>
+                <p>contact us</p>
+              </Link>
               <a href='#Footer'>feedback</a>
             </div>
             <div className='details contact-us'>

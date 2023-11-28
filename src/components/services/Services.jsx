@@ -81,18 +81,23 @@ const Services = () => {
           >
             industries we work in
           </motion.h1>
-          <motion.div variants={flierVariant} className='serviceContents'>
+          <motion.div
+            variants={flierVariant}
+            initial='initial'
+            whileInView='animate'
+            className='serviceContents'
+          >
             {items.map((item) => (
               <motion.div
                 variants={flierVariant}
                 className='service'
                 key={item.id}
               >
-                <motion.div className='imageContainer'>
+                <div className='imageContainer'>
                   <img src={item.img} alt='' />
-                </motion.div>
-                <motion.h2>{item.desc}</motion.h2>
-                <motion.button>learn more</motion.button>
+                </div>
+                <h2>{item.desc}</h2>
+                <button>learn more</button>
               </motion.div>
             ))}
           </motion.div>

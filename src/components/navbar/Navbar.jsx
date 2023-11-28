@@ -1,9 +1,55 @@
 import React from 'react'
 import './navbar.scss'
 import Sidebar from './sidebar/Sidebar'
+import { motion } from 'framer-motion'
+
+const logoVariants = {
+  initial: {
+    x: -400,
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+}
+
+const linkVariants = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+    },
+  },
+}
+const socialVariants = {
+  initial: {
+    x: 400,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+    },
+  },
+}
 
 const items = [
-  { title: 'Home', link: '#Home' },
+  { title: 'Home', link: '/' },
   { title: 'Services', link: '#Services' },
   { title: 'Portfolio', link: '#Portfolio' },
   { title: 'Projects', link: '#Projects' },
@@ -14,32 +60,60 @@ const Navbar = () => {
   return (
     <div className=''>
       <Sidebar />
-      <div className='navbar'>
-        <div className='logo'>
-          <h1>Brich Africana</h1>
-        </div>
-        <div className='links'>
+      <motion.div className='navbar' initial='initial' animate='animate'>
+        <motion.div className='logo' variants={logoVariants}>
+          <h1>
+            {' '}
+            <a href='/'>Brich Africana</a>
+          </h1>
+        </motion.div>
+        <motion.div className='links' variants={linkVariants}>
           {items.map((item) => (
-            <a href={`${item.link}`} className='home' key={item.title}>
+            <motion.a
+              href={`${item.link}`}
+              className='home'
+              key={item.title}
+              variants={linkVariants}
+            >
               {item.title}
-            </a>
+            </motion.a>
           ))}
-        </div>
-        <div className='socials'>
-          <a href='https://facebook.com' target='_blank' rel='noopener'>
+        </motion.div>
+        <motion.div className='socials' variants={socialVariants}>
+          <motion.a
+            variants={socialVariants}
+            href='https://facebook.com'
+            target='_blank'
+            rel='noopener'
+          >
             <img src='/facebook.png' alt='' />
-          </a>
-          <a href='https://instagram.com' target='_blank' rel='noopener'>
+          </motion.a>
+          <motion.a
+            variants={socialVariants}
+            href='https://instagram.com'
+            target='_blank'
+            rel='noopener'
+          >
             <img src='/instagram.png' alt='' />
-          </a>
-          <a href='https://twitter.com' target='_blank' rel='noopener'>
+          </motion.a>
+          <motion.a
+            variants={socialVariants}
+            href='https://twitter.com'
+            target='_blank'
+            rel='noopener'
+          >
             <img src='/x-logo.png' alt='' />
-          </a>
-          <a href='https://linkedin.com' target='_blank' rel='noopener'>
+          </motion.a>
+          <motion.a
+            variants={socialVariants}
+            href='https://linkedin.com'
+            target='_blank'
+            rel='noopener'
+          >
             <img src='/linkedIn.webp' alt='' />
-          </a>
-        </div>
-      </div>
+          </motion.a>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }

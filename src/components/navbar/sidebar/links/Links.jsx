@@ -26,8 +26,26 @@ const itemVariants = {
   },
 }
 
+const socialVariants = {
+  closed: {
+    x: 100,
+    opacity: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+  open: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.3,
+    },
+  },
+}
+
 const items = [
-  { title: 'Home', link: '#Home' },
+  { title: 'Home', link: '/' },
   { title: 'Services', link: '#Services' },
   { title: 'Portfolio', link: '#Portfolio' },
   { title: 'Projects', link: '#Projects' },
@@ -47,19 +65,39 @@ const Links = ({ setOpen }) => {
           {item.title}
         </motion.a>
       ))}
-      <motion.div className='social'>
-        <a href='https://facebook.com' target='_blank' rel='noopener'>
+      <motion.div className='social' variants={socialVariants}>
+        <motion.a
+          variants={socialVariants}
+          href='https://facebook.com'
+          target='_blank'
+          rel='noopener'
+        >
           <img src='/facebook.png' alt='' />
-        </a>
-        <a href='https://instagram.com' target='_blank' rel='noopener'>
+        </motion.a>
+        <motion.a
+          variants={socialVariants}
+          href='https://instagram.com'
+          target='_blank'
+          rel='noopener'
+        >
           <img src='/instagram.png' alt='' />
-        </a>
-        <a href='https://twitter.com' target='_blank' rel='noopener'>
+        </motion.a>
+        <motion.a
+          variants={socialVariants}
+          href='https://twitter.com'
+          target='_blank'
+          rel='noopener'
+        >
           <img src='/x-logo.png' alt='' />
-        </a>
-        <a href='https://linkedin.com' target='_blank' rel='noopener'>
+        </motion.a>
+        <motion.a
+          variants={socialVariants}
+          href='https://linkedin.com'
+          target='_blank'
+          rel='noopener'
+        >
           <img src='/linkedIn.webp' alt='' />
-        </a>
+        </motion.a>
       </motion.div>
     </motion.div>
   )

@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 
 const logoVariants = {
   initial: {
-    x: -400,
-    y: -100,
+    x: -150,
+    y: -50,
     opacity: 0,
   },
   animate: {
@@ -21,7 +21,7 @@ const logoVariants = {
 
 const linkVariants = {
   initial: {
-    y: -100,
+    y: -50,
     opacity: 0,
   },
   animate: {
@@ -35,7 +35,7 @@ const linkVariants = {
 }
 const socialVariants = {
   initial: {
-    x: 400,
+    x: 100,
     opacity: 0,
   },
   animate: {

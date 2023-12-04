@@ -1,8 +1,58 @@
-import React from 'react'
+import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+
+const imgVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
+  },
+}
+
+const textVariants = {
+  initial: {
+    x: 500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      staggerChildren: 0.4,
+    },
+  },
+}
 
 const Creative = () => {
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100 && !hasAnimated) {
+        setHasAnimated(true)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [hasAnimated])
+
   return (
-    <div className='creative'>
+    <motion.div
+      className='creative'
+      initial='initial'
+      animate={hasAnimated ? 'animate' : 'initial'}
+      // whileInView='animate'
+    >
       <div className='image'>
         <div className='bg'>
           <div className='imageContainer'>
@@ -10,20 +60,34 @@ const Creative = () => {
           </div>
         </div>
       </div>
-      <div className='desc'>
-        <h2>
+      <motion.div
+        variants={textVariants}
+        className='desc'
+        initial='initial'
+        whileInView={hasAnimated ? 'animate' : 'initial'}
+      >
+        <motion.h2
+          variants={textVariants}
+          whileInView={hasAnimated ? 'animate' : 'initial'}
+        >
           we are creative people <br /> with big dreams
-        </h2>
-        <p>
+        </motion.h2>
+        <motion.p
+          variants={textVariants}
+          whileInView={hasAnimated ? 'animate' : 'initial'}
+        >
           the ability of our digital agency lies in an ever-evolving set of core
           competencies nimbly combined and refined into a custom solution for
           our clients and their brands
-        </p>
-        <button>
+        </motion.p>
+        <motion.button
+          variants={textVariants}
+          whileInView={hasAnimated ? 'animate' : 'initial'}
+        >
           <a href='/Contact'>contact us now</a>
-        </button>
-      </div>
-    </div>
+        </motion.button>
+      </motion.div>
+    </motion.div>
   )
 }
 

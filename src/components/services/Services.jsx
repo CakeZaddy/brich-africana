@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
+import { useEffect, useState } from 'react'
 import './services.scss'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const flierVariant = {
   initial: {
-    x: 400,
+    x: 100,
     opacity: 0,
   },
   animate: {
@@ -19,7 +19,7 @@ const flierVariant = {
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -200,
     opacity: 0,
   },
   animate: {
@@ -40,15 +40,27 @@ const items = [
 ]
 
 const Services = () => {
-  // const ref = useRef()
-  // const inView = useInView(ref, { margin: '-100px' })
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100 && !hasAnimated) {
+        setHasAnimated(true)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [hasAnimated])
 
   return (
     <motion.div
-      // ref={ref}
       className='services'
       initial='initial'
-      whileInView='animate'
+      animate={hasAnimated ? 'animate' : 'initial'}
     >
       <div className='flier'>
         <div className='flierText'>
@@ -58,16 +70,16 @@ const Services = () => {
           <div className='vertical-line'></div>
         </div>
         <div className='groups'>
-          <div className='logos'>
-            <motion.div variants={flierVariant} className='logoContainer'>
+          <div className='logos' variants={flierVariant}>
+            <div className='logoContainer'>
               <motion.img variants={flierVariant} src='/microsoft.png' alt='' />
               <motion.img variants={flierVariant} src='/google.png' alt='' />
               <motion.img variants={flierVariant} src='/react.png' alt='' />
-            </motion.div>
-            <motion.div variants={flierVariant} className='logoContainer'>
+            </div>
+            <div className='logoContainer'>
               <motion.img variants={flierVariant} src='/slack.png' alt='' />
               <motion.img variants={flierVariant} src='/wix.png' alt='' />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -77,19 +89,26 @@ const Services = () => {
             className='title'
             variants={textVariants}
             initial='initial'
-            whileInView='animate'
+            // whileInView='animate'
+
+            whileInView={hasAnimated ? 'animate' : 'initial'}
           >
             industries we work in
           </motion.h1>
           <motion.div
             variants={flierVariant}
             initial='initial'
-            whileInView='animate'
+            // whileInView='animate'
+
+            whileInView={hasAnimated ? 'animate' : 'initial'}
             className='serviceContents'
           >
             {items.map((item) => (
               <motion.div
                 variants={flierVariant}
+                // initial='initial'
+                // whileInView='animate'
+                animate={hasAnimated ? 'animate' : {}}
                 className='service'
                 key={item.id}
               >

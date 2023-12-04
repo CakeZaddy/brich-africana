@@ -104,11 +104,11 @@ const Services = () => {
             className='serviceContents'
           >
             {items.map((item) => (
-              <motion.div
-                variants={flierVariant}
+              <div
+                // variants={flierVariant}
                 // initial='initial'
                 // whileInView='animate'
-                animate={hasAnimated ? 'animate' : {}}
+                // animate={hasAnimated ? 'animate' : {}}
                 className='service'
                 key={item.id}
               >
@@ -117,7 +117,7 @@ const Services = () => {
                 </div>
                 <h2>{item.desc}</h2>
                 <button>learn more</button>
-              </motion.div>
+              </div>
             ))}
           </motion.div>
         </motion.div>

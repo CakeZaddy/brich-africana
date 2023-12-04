@@ -87,31 +87,31 @@
       text-transform: capitalize;
       padding-bottom: 20px;
 
-      @include mobile {
-        width: 200px;
-        gap: 10px;
-        padding: 5px;
-      }
+      // @include mobile {
+      //   width: 200px;
+      //   gap: 10px;
+      //   padding: 5px;
+      // }
 
       .imageWrap {
         width: 330px;
         height: 250px;
         border-radius: 10px;
 
-        @include mobile {
-          width: 185px;
-          height: 120px;
-        }
+        // @include mobile {
+        //   width: 185px;
+        //   height: 120px;
+        // }
         img {
           object-fit: cover;
           width: 330px;
           height: 220px;
           border-radius: 10px;
 
-          @include mobile {
-            width: 185px;
-            height: 120px;
-          }
+          // @include mobile {
+          //   width: 185px;
+          //   height: 120px;
+          // }
         }
       }
       h3 {

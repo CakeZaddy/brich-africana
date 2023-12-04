@@ -1,7 +1,24 @@
-import React from 'react'
 import './projects.scss'
 import Project from './Project'
 import ContactUs from './ContactUs'
+import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
+
+const textVariants = {
+  initial: {
+    x: -400,
+    opacity: 0,
+  },
+
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      staggerChildren: 0.4,
+    },
+  },
+}
 
 const projects = [
   {
@@ -43,16 +60,35 @@ const projects = [
 ]
 
 const Projects = () => {
+  const [hasAnimated, setHasAnimated] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100 && !hasAnimated) {
+        setHasAnimated(true)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [hasAnimated])
+
   return (
-    <div className='projects'>
+    <motion.div
+      className='projects'
+      initial='initial'
+      animate={hasAnimated ? 'animate' : 'initial'}
+    >
       <div className='wrapper'>
-        <div className='projectsTitle'>
-          <h2>our recent case studies</h2>
-          <p>
+        <motion.div className='projectsTitle'>
+          <motion.h2>our recent case studies</motion.h2>
+          <motion.p>
             our team can create amazing portfolio, C.V's, beginning with deep
             market research, practical strategies and professional execution.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         <div className='projectWrap'>
           {projects.map((project) => (
             <Project project={project} key={project.id} />
@@ -62,7 +98,7 @@ const Projects = () => {
           <ContactUs />
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

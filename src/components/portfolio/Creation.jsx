@@ -42,7 +42,7 @@ const Creation = () => {
       <motion.div
         className='desc'
         variants={textVariants}
-        whileInView={hasAnimated ? 'animate' : 'initial'}
+        // whileInView={hasAnimated ? 'animate' : 'initial'}
       >
         <motion.h2
           variants={textVariants}
